@@ -1,0 +1,26 @@
+//
+//  PrefixHeader.pch
+//  TableCell-Autolayout
+//
+//  Created by WeiHan on 17/10/2017.
+//  Copyright © 2017 WillHan. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define MAS_SHORTHAND
+#import <Masonry.h>
+
+#define RGBA(__r, __g, __b, __a)            \
+[UIColor colorWithRed: ((__r) / 255.0f) \
+green: ((__g) / 255.0f)                    \
+blue: ((__b) / 255.0f)                     \
+alpha: (__a)]
+
+#define RGB(__r, __g, __b) RGBA(__r, __g, __b, 1.0)
+
+#define LightRandomColor RGB(arc4random_uniform(127) + 127, arc4random_uniform(127) + 127, arc4random_uniform(127) + 127)
+#define DarkRandomColor  RGB(arc4random_uniform(127), arc4random_uniform(127), arc4random_uniform(127))
+
+#endif /* PrefixHeader_pch */
